@@ -7,6 +7,7 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'index.js'
     },
+    target: 'node',
     module: {
         loaders: [
             {
