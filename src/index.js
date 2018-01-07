@@ -4,10 +4,20 @@ class App extends React.Component {
   constructor(props){
     super(props)
   }
+  componentDidMount(){
+    var url = "python";
+   var params = { method: 'GET'
+                 };
+                 console.log("TESTBIS");
+   fetch(url, params).then(function(response) {
+     console.log("TEST");
+     console.log(response);
+   });
+  }
   render () {
         return (
           <div>
-              HELLO
+              HELLO BIS
           </div>
         );
   }
