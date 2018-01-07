@@ -2,9 +2,9 @@
   "name": "ds-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "webpack && node ./index",
+    "start": "webpack",
     "webpack": "webpack && open http://127.0.0.1:8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1"
   }
 }
