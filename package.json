@@ -6,13 +6,15 @@
   "scripts": {
     "start": "webpack",
     "webpack": "webpack && open http://127.0.0.1:8080",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start_": "react-scripts start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "react-scripts": "^1.0.17"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
