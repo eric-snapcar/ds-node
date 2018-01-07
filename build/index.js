@@ -460,22 +460,29 @@ var App = function (_React$Component) {
   function App(props) {
     _classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    console.log("TESTTER");
-    return _this;
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
   }
 
   _createClass(App, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var url = "python";
+      var url = "test";
       var params = { method: 'GET'
       };
       console.log("TESTBIS");
       fetch(url, params).then(function (response) {
         console.log("TEST");
         console.log(response);
+      });
+
+      fetch(url, params).then(function (response) {
+        if (response.ok) {
+          return response.json();
+        } else {
+          console.log(response);
+        }
+      }).then(function (json) {
+        console.log(json);
       });
     }
   }, {

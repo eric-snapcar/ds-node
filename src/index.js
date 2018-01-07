@@ -5,7 +5,7 @@ class App extends React.Component {
     super(props)
   }
   componentDidMount(){
-    var url = "python";
+    var url = "test";
    var params = { method: 'GET'
                  };
                  console.log("TESTBIS");
@@ -13,6 +13,18 @@ class App extends React.Component {
      console.log("TEST");
      console.log(response);
    });
+
+   fetch(url, params).then(function(response) {
+  if(response.ok){
+    return response.json();
+  }
+
+  else {
+    console.log(response);
+  }
+}).then(function(json) {
+  console.log(json);
+});
   }
   render () {
         return (
