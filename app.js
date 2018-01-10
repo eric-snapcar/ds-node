@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
 })
 app.use(express.static('build'));
 app.get('/test', function (req, res) {
-   res.json({ message: 'TEST API OK' });
+
 
 
 
@@ -19,14 +19,21 @@ app.get('/test', function (req, res) {
    py.stdout.on('data', function(data){
      console.log("TEST stdout.on data");
      console.log(data);
-     dataString += data.toString();
+     dataString = data.toString();
+     console.log(dataString);
+
    });
    py.stdout.on('end', function(){
      console.log('Sum of numbers = ',dataString);
+     res.json({response:dataString});
    });
-   py.stdin.write("TEST WRITE");
+   py.stdin.write("TEST 1");
+   py.stdin.write("TEST 2");
+   py.stdin.write("TEST 3");
    py.stdin.end();
-//  
+console.log("DFDSF");
+
+//
 })
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')

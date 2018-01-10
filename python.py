@@ -22,7 +22,7 @@ def main():
 """
 def main():
     lines = sys.stdin.readlines()
-    print lines[0]
+    print(lines[0]+"ICI C'EST PYTHON")
 #start process
 if __name__ == '__main__':
     main()
